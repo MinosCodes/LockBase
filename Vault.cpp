@@ -56,8 +56,9 @@ void Vault::listCreds() const {
         return;
     }
     for(size_t i = 0 ;i<Credentials.size();++i){
-        cout<<i + 1<< "." << Credentials[i].service
-            <<" - " << Credentials[i].username << " \n" ; 
+        if(Credentials[i].service != ""){
+            cout<<i + 1<< "." << Credentials[i].service << " : "<<" pwd :" << Credentials[i].password
+            <<" usr :  " << Credentials[i].username << " \n" ; }
     }
 }
 void Vault :: deleteCreds(int index) {

@@ -28,7 +28,9 @@ class Vault {
      vector<Credential> Credentials;
 
     string encrypt(const string& text) const;
-     string decrypt(const string& text) const;
+    string decrypt(const string& text) const;
+    void loadFromFile();
+    void saveToFile() const;
 };
 #endif
 
